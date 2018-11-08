@@ -21,7 +21,7 @@ export default {
   },
   created() {
     wx.setNavigationBarTitle({
-      title: '分包 A',
+      title: '分包 B',
     })
   },
   methods:{

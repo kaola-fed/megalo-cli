@@ -3,7 +3,8 @@
       <img class="img" src="https://user-images.githubusercontent.com/20720117/48007061-c516b380-e151-11e8-8dd0-cd1b0aaaef5f.png" @touchstart="changeStat">
       <hello-world :color="color"></hello-world>
       <h1 class="txt" v-show="t%2==1">click logo::{{t}}</h1>
-      <a class="nav" url="/packageA/pages/test/index">分包测试</a>
+      <a class="nav" url="/packageA/pages/test/index">跳转至分包 A</a>
+      <a class="nav" url="/pages/packageB/pages/test/index">跳转至分包 B</a>
   </div>
 </template>
 
