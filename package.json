@@ -30,6 +30,7 @@
     "compare-versions": "^3.4.0",
     "is-email": "^1.0.0",
     "latest-version": "^4.0.0",
+    "ora": "^3.0.0",
     "sao": "^0.22.1"
   },
   "devDependencies": {}

@@ -2,6 +2,7 @@
 const sao = require('sao')
 const minimist = require('minimist')
 const lv = require('latest-version')
+const Mesg = require('./util/message')
 const { version:localVersion } = require('./package.json')
 const { version:consoleVersion, help:consoleHelp } = require('./util')
 
@@ -13,9 +14,12 @@ let latestVersion = 0,
     hasNewVersion = false
 
 ;(async () => {
+    const spinner = Mesg.wait('检查@megalo/cli版本')
+    spinner.start()
     latestVersion = await lv('@megalo/cli')
+    spinner.stop()
     hasNewVersion = consoleVersion(localVersion, latestVersion, v || _v)
-
+    !hasNewVersion && Mesg.info(`已是最新版本${latestVersion}`)
     if (h || _h) {
         return consoleHelp()
     } else if (v || _v || (hasNewVersion && !f && !_f)) {
