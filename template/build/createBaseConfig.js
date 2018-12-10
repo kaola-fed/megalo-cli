@@ -4,7 +4,9 @@ const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const argv = require('minimist')(process.argv.slice(2))
+const mode = argv.mode || 'development'
+console.log('模式', mode)
 const _ = require( './util' );
 const appMainFile = _.resolve('src/app.js')
 const CSS_EXT = {
