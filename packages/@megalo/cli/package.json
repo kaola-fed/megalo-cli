@@ -8,7 +8,7 @@
     "megalo-cli"
   ],
   "bin": {
-    "megalo": "./cli.js"
+    "megalo": "./bin/megalo.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,7 @@
   "author": "zwwill <zwwill7@163.com> (github.com/zwwill)",
   "license": "MIT",
   "files": [
-    "saofile.js",
-    "cli.js",
-    "templates",
+    "lib",
     "util"
   ],
   "scripts": {
@@ -32,9 +30,28 @@
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "compare-versions": "^3.4.0",
     "execa": "^1.0.0",
-    "latest-version": "^4.0.0",
-    "sao": "^1.6.1"
+    "commander": "^2.20.0",
+    "compare-versions": "^3.4.0",
+    "@megalo/cli-service": "^1.0.0-beta.2",
+    "@megalo/cli-share-utils": "^1.0.0-beta.2",
+    "deepmerge": "^4.0.0",
+    "didyoumean": "^1.2.1",
+    "globby": "^10.0.1",
+    "inquirer": "^7.0.0",
+    "isbinaryfile": "^4.0.2",
+    "javascript-stringify": "^1.6.0",
+    "js-yaml": "^3.13.1",
+    "jscodeshift": "^0.6.4",
+    "lodash.clonedeep": "^4.5.0",
+    "resolve": "^1.12.0",
+    "semver": "^6.3.0",
+    "slash": "^3.0.0",
+    "validate-npm-package-name": "^3.0.0",
+    "vue-jscodeshift-adapter": "^2.0.2",
+    "yaml-front-matter": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=8.9"
   }
 }

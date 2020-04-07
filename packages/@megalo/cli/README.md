@@ -7,13 +7,13 @@
 install
 
 ``` bash
-$ npm i -g sao
+$ npm i
 ```
 
 build and create project
 
 ``` bash
-$ sao npm:@megalo/cli@latest your-project-name --update
+$ megalo create your-project-name
 ```
 
 enter the project root directory
